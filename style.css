@@ -1,0 +1,53 @@
+.banner {
+  position: relative;
+  height: 600px;
+  width: 100%;
+    overflow: hidden; /* esconde a parte da imagem que ficar fora do banner */
+
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+}
+
+.mergulhador {
+  position: absolute;
+  bottom: 100px; /* a posição inicial do mergulhador */
+  left: 50%; /* centraliza o mergulhador na horizontal */
+  transform: translateX(-50%); /* ajusta a posição horizontal do mergulhador */
+  animation: swim 4s ease-in-out infinite;
+}
+
+@keyframes swim {
+            0% {
+                transform: translateX(0); /* mova a imagem para a esquerda */
+            }
+            50% {
+                transform: translateX(50px); /* mova a imagem para a direita */
+            }
+            100% {
+                transform: translateX(0); /* mova a imagem de volta para a esquerda */
+            }
+        }
+
+.mergulhador img {
+  height: 300px;
+  width: auto;
+  transform-origin: bottom center; /* define o ponto de origem da escala */
+
+}
+
+.container {
+    height: 2000px;
+}
+
+
+
+.ocean {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* esconde as ondas que ficar fora do banner */
+}
+
